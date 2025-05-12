@@ -18,21 +18,27 @@ void setup() {
 void loop() {
   buttonState = digitalRead(buttonPin);
 
-  if (buttonState == LOW {
-    digitalWrite(ledPin4, HIGH);
-    cont++;
+  if (buttonState == HIGH) {
+    digitalWrite(ledPin4, LOW);
 
   } else {
     digitalWrite(ledPin4, LOW);
+    cont++;
 
     if (cont == 1) {
+      digitalWrite(ledPin3, HIGH);
+      digitalWrite(ledPin2, HIGH);
       digitalWrite(ledPin, LOW);
 
     } else if (cont == 2) {
       digitalWrite(ledPin2, LOW);
+      digitalWrite(ledPin3, HIGH);
+      digitalWrite(ledPin, HIGH);
 
     } else {
       digitalWrite(ledPin3, LOW);
+      digitalWrite(ledPin2, HIGH);
+      digitalWrite(ledPin, HIGH);
     }
   }
 }
